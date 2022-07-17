@@ -49,12 +49,12 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаеммый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
 
     }
 
     @org.junit.jupiter.api.Test
-    void shouldCalculateForNotRegisteredAndOverLimit(){
+    void shouldCalculateForNotRegisteredAndOverLimit() {
         BonusService service = new BonusService();
         // подготавливаем даннные:
         long amount = 100_000;
@@ -64,13 +64,13 @@ public class BonusServiceTest {
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
         // производим проверку (сравниваем ожидаеммый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
 
 
     }
 
     @org.junit.jupiter.api.Test
-    void  shouldCalculateForRegisteredAndZeroBonus() {
+    void shouldCalculateForRegisteredAndZeroBonus() {
         BonusService service = new BonusService();
 
         // подготавливаем даннные:
@@ -83,7 +83,7 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаеммый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
 
 
     }
@@ -96,14 +96,12 @@ public class BonusServiceTest {
         boolean registered = false;
         long expected = 0;
         // вызываем целевой метод:
-        long actual = service.calculate(amount,registered);
+        long actual = service.calculate(amount, registered);
         // производим проверку (сравниваем ожидаеммый и фактический):
-        Assertions.assertEquals(expected,actual);
-
+        Assertions.assertEquals(expected, actual);
 
 
     }
-
 
 
 }
